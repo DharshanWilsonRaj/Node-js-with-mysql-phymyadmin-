@@ -1,6 +1,7 @@
 import express from 'express';
-import User from '../models/User.js';
+import models from '../sequelize.js';
 
+const { User } = models
 const router = express.Router();
 router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
