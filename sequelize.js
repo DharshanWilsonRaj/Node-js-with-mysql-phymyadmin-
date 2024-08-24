@@ -18,6 +18,14 @@ const models = {
       type: Sequelize.STRING,
       allowNull: false,
     },
+    createdAt: {
+      type: Sequelize.DATE,
+      allowNull: true,
+    },
+    updatedAt: {
+      type: Sequelize.DATE,
+      allowNull: true,
+    },
   }),
   User: sequelize.define('user', {
     name: {
@@ -29,8 +37,11 @@ const models = {
       allowNull: false,
       unique: true,
     },
-  }),
- 
+    createdAt: {
+      type: Sequelize.DATE,
+      allowNull: true,
+    },
+ }),
 };
 
 // Sync all models with the database
